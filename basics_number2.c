@@ -47,7 +47,6 @@ int int_to_str(int num, char *str, int digit)
 
         reverse_numbers(str, i);
         str[i] = '\0';
-        printf("number in string: %s",str);
         return(0);
 }
 
@@ -55,15 +54,35 @@ int int_to_str(int num, char *str, int digit)
  *malloc_num - converts a num into string, allocate the size the char
  *@num: num to converter
  *
- *Return: 0 success
+ *Return: Nothing, it's a void
  */
-int malloc_num(int num)
+void real_number(char *str, va_list valist, xbuf *buf)
 {
-	int digit;
+	int digit, num, flag;
 	char *str_num;
+	char *str_n_num;
+	char negative[2];
+
+	(void) str;
+	flag = 0;
+	negative[0] = '-';
+	negative[1] = '\0';
+	num = va_arg(valist, int);
+	if (num < 0)
+	{
+		num = num * -1;
+		flag = 1;
+	}
 	digit = digits(num);
-	str_num = malloc(digit + 1 * sizeof(char));
+	str_num = malloc((digit + 1) * sizeof(char));
 	int_to_str(num, str_num, digit);
+	if (flag == 1)
+	{
+		str_n_num = malloc((digit + 2) * sizeof(char));
+		str_n_num = str_concat(negative, str_num);
+		string_to_buff(buf, str_n_num, _strl(str_num));
+	}
+	else
+		string_to_buff(buf, str_num, _strl(str_num));
 	free(str_num);
-	return (0);
 }

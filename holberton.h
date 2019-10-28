@@ -31,7 +31,7 @@ xbuf *char_to_buff(xbuf *buf, char c);
 /**
  *Int to string functions
  */
-int malloc_num(int num);
+void real_number(char *str, va_list valist, xbuf *buf);
 int int_to_str(int num, char *str, int digit);
 int digits(int num);
 

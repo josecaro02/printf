@@ -2,9 +2,9 @@
 
 void real_char(char *str, va_list valist, xbuf *buf)
 {
-	(void) str;
 	char charls;
 	char s[1];
+	(void) str;
 
 	charls = va_arg(valist,int);
 	s[0] = charls;

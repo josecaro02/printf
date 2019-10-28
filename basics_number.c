@@ -1,16 +1,5 @@
 #include "holberton.h"
 
-int _nlen(unsigned int n)
-{
-	int c;
-
-	for (c = 0; n > 0; c++)
-	{
-		n /=10;
-	}
-	return (c);
-}
-
 void reverse_numbers(char *a, int n)
 {
 	
@@ -30,7 +19,7 @@ char *n_converter(unsigned long int n, int base, char *ascci)
 	unsigned long int longitude,loop, init_long;
 	char *output;
 
-	longitude = _nlen(n);
+	longitude = digits(n);
 	init_long = 0;
 	if (base > 9)
 	{
