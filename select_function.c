@@ -12,7 +12,7 @@ void (*s_func(char c))(char *f, va_list, xbuf *)
 		{'b', real_n_converter},
 		{'%', real_char},
 		{'c', real_char},
-		{'p', real_address}
+		{'p', real_n_converter}
 	};
 	int d;
 	

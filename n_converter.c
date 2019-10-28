@@ -1,6 +1,4 @@
 #include "holberton.h"
-
-
 /**
  *real_n_converter - save in buffer any base convertion
  *is p
