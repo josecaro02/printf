@@ -28,21 +28,6 @@ void p_buffer(char *buffer, int size);
 xbuf *string_to_buff(xbuf *buf, const char *c, int size);
 xbuf *char_to_buff(xbuf *buf, char c);
 
-void real_reverse(char *str, va_list valist, xbuf *buf);
-char *_new_pointer_str(char *str);
-int check_reverse(char *str);
-void reverse(char *str);
-
-void (*s_func(char c))(char *, va_list, xbuf *);
-
-int _printf(const char *format, ...);
-
-char *n_converter(unsigned long int n, int base, char *ascci);
-void real_unsigned(char *str, va_list valist, xbuf *buf);
-void real_unsigned_octal(char *str, va_list valist, xbuf *buf);
-void reverse_numbers(char *a, int n);
-int _nlen(unsigned int n);
-
 /**
  *Int to string functions
  */
@@ -56,4 +41,17 @@ int digits(int num);
  */
 void real_address(char *str, va_list valist, xbuf *buf);
 char *str_concat(char *s1, char *s2);
+char *reversed_new_pointer_str(char *str);
+int check_reverse(char *str);
+void reverse(char *str);
+
+void (*s_func(char c))(char *f, va_list, xbuf *);
+
+int _printf(const char *format, ...);
+
+char *n_converter(unsigned int n, int base, char *ascci);
+void real_string(char *str, va_list valist, xbuf *buf);
+void real_n_converter(char *str, va_list valist, xbuf *buf);
+void real_char(char *str, va_list valist, xbuf *buf);
+int _nlen(unsigned int n);
 #endif
