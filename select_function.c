@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+ *s_func - function that selects the correct function to return
+ *in base of the character c that the user gives
+ *@c: character to find in the array of structures
+ *
+ *Return: nothing, it's a void
+ */
 void (*s_func(char c))(char *f, va_list, xbuf *)
 {
 	v_string function[] = {
@@ -19,9 +26,9 @@ void (*s_func(char c))(char *f, va_list, xbuf *)
 		{'S', real_string}
 	};
 	int d;
-	
+
 	d = 0;
-	while(d < 14)
+	while (d < 14)
 	{
 		if (function[d].format == c)
 		{

@@ -10,15 +10,14 @@
  */
 int digits(int num)
 {
+	int digit;
 
-
-        int digit;
 	digit = 0;
-        while (num != 0)
-        {
-                num = num / 10;
-                digit++;
-        }
+	while (num != 0)
+	{
+		num = num / 10;
+		digit++;
+	}
 	return (digit);
 }
 
@@ -32,27 +31,27 @@ int digits(int num)
  */
 int int_to_str(int num, char *str, int digit)
 {
-        int i;
+	int i;
 
-        i = 0;
-
-        while (num)
-        {
-                str[i++] = (num % 10) + '0';
-                num = num / 10;
-        }
-
-        while (i < digit)
-                str[i++] = '0';
-
-        reverse_numbers(str, i);
-        str[i] = '\0';
-        return(0);
+	i = 0;
+	while (num)
+	{
+		str[i++] = (num % 10) + '0';
+		num = num / 10;
+	}
+	while (i < digit)
+		str[i++] = '0';
+	reverse_numbers(str, i);
+	str[i] = '\0';
+	return (0);
 }
 
 /**
- *malloc_num - converts a num into string, allocate the size the char
- *@num: num to converter
+ *real_number - converts a num into string, allocate the size the char
+ *@str: string with character after % - unused
+ *@valist: valist with the argument - number - to convert into string and save
+ *to the buffer
+ *@buf: buffer to save the string of the number
  *
  *Return: Nothing, it's a void
  */

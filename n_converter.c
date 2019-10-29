@@ -17,15 +17,15 @@ void real_n_converter(char *str, va_list valist, xbuf *buf)
 
 	c = va_arg(valist, unsigned long int);
 	if (*str == 'x')
-		base_converted = n_converter(c, 16 , "0123456789abcdef");
+		base_converted = n_converter(c, 16, "0123456789abcdef");
 	if (*str == 'X')
-		base_converted = n_converter(c, 16 , "0123456789ABCDEF");
+		base_converted = n_converter(c, 16, "0123456789ABCDEF");
 	if (*str == 'b')
 		base_converted = n_converter(c, 2, "01");
 	if (*str == 'o')
-		base_converted = n_converter(c, 8 , "01234567");
+		base_converted = n_converter(c, 8, "01234567");
 	if (*str == 'u')
- 		base_converted = n_converter(c, 10, "0123456789");
+		base_converted = n_converter(c, 10, "0123456789");
 	if (*str == 'p')
 	{
 		tail_add = n_converter(c, 16, "0123456789abcdef");

@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+ *_strl - Calc the size of a string
+ *@s: string given by user
+ *
+ *Return: size of the s
+ */
 int _strl(const char *s)
 {
 	int c;
@@ -9,10 +15,16 @@ int _strl(const char *s)
 	return (c);
 }
 
+/**
+ *check_flag - check if the string has a flag
+ *@s: string to check
+ *
+ *Return: 1 if there is a flag, 0 otherwise
+ */
 int check_flag(char *s)
 {
 	char *flag = "+ -#0";
-	
+
 	while (*flag)
 	{
 		if (*flag == *s)
@@ -24,6 +36,12 @@ int check_flag(char *s)
 	return (0);
 }
 
+/**
+ *check_cformatter - check if there is a allowed format after "%"
+ *@c: char to test
+ *
+ *Return: 0 if the char is allowed, 1 otherwise
+ */
 int check_cformatter(char c)
 {
 	char formatters[] = "%cRrSbXxouidsp";
@@ -39,6 +57,14 @@ int check_cformatter(char c)
 		return (1);
 }
 
+/**
+ *strncpy_ - copy a string
+ *@loc: string to save the copt
+ *@stc: string to copy
+ *@c: quantity of characters to copy
+ *
+ *Return: new string loc with the copy of the string
+ */
 char *strncpy_(char *loc, const char *stc, int c)
 {
 	int d;
@@ -53,6 +79,13 @@ char *strncpy_(char *loc, const char *stc, int c)
 	}
 	return (loc);
 }
+
+/**
+ *takes_format_string - takes the pointer in the position after %
+ *@format: format given by user that has the string to convert
+ *
+ *Return: new char with the pointer after the % char
+ */
 char *takes_format_string(const char *format)
 {
 	int loop;
@@ -65,4 +98,3 @@ char *takes_format_string(const char *format)
 	formated_string[loop + 1] = '\0';
 	return (formated_string);
 }
-
