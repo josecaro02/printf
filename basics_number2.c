@@ -79,7 +79,7 @@ void real_number(char *str, va_list valist, xbuf *buf)
 	{
 		str_n_num = malloc((digit + 2) * sizeof(char));
 		str_n_num = str_concat(negative, str_num);
-		string_to_buff(buf, str_n_num, _strl(str_num));
+		string_to_buff(buf, str_n_num, _strl(str_n_num));
 	}
 	else
 		string_to_buff(buf, str_num, _strl(str_num));
