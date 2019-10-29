@@ -14,12 +14,14 @@ void (*s_func(char c))(char *f, va_list, xbuf *)
 		{'c', real_char},
 		{'p', real_n_converter},
 		{'d', real_number},
-		{'i', real_number}
+		{'i', real_number},
+		{'R', real_string},
+		{'S', real_string}
 	};
 	int d;
 	
 	d = 0;
-	while(d < 13)
+	while(d < 14)
 	{
 		if (function[d].format == c)
 		{

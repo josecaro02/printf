@@ -15,6 +15,14 @@ void real_string(char *str, va_list valist, xbuf *buf)
 	{
 		string = reversed_new_pointer_str(string);
 	}
+	if (*str == 'R')
+	{
+		string = rot13(string);
+	}
+	if (*str == 'S')
+	{
+		string = S(string);
+	}
 	string_to_buff(buf, string, _strl(string));
 	
 }

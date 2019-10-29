@@ -42,9 +42,11 @@ int digits(int num);
 void real_address(char *str, va_list valist, xbuf *buf);
 char *str_concat(char *s1, char *s2);
 char *reversed_new_pointer_str(char *str);
+char *rot13(char *str);
 int check_reverse(char *str);
 void reverse(char *str);
- void reverse_numbers(char *a, int n);
+void reverse_numbers(char *a, int n);
+char *S(char *str);
 
 void (*s_func(char c))(char *f, va_list, xbuf *);
 
