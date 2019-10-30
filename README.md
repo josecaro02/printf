@@ -25,8 +25,8 @@ Now the way to implement the function is the next.
 
 >Additionally if you want o make some conversions to your numbers or strings you can use the next translations.
 
-| Conversion  | base 10 to 16| base 10 to 8 | base 10 to 2  | Reverse String | rot13 string  
-|-------------|----| --| --|--| --| --|
+| Conversion  | base 10 to 16| base 10 to 8 | base 10 to 2  | Reverse String | rot13 string  |
+|-------------|----| --| --|--| --|
 | Translation |%x lowercase letters or %X uppercase letters| %o | %b | %r | %R |
 **Return**: finally you have to know that this function return an **int** with the quantity of characters that you print.
 
