@@ -1,0 +1,53 @@
+.Dd 29/10/2019               \" DATE
+.Dt _printf      \" Program name and manual section number
+.Os Printf
+.Sh Real Printf                 
+.Nm _printf(),
+.Nd This function emulates how the printf function works 
+.Sh SYNOPSIS             \" Section Header - required - don't modify
+.Nm
+.Op Fl abcd              \" [-abcd]
+.Op Fl a Ar path         \" [-a path]
+.Op Ar file              \" [file]
+.Op Ar                   \" [file ...]
+.Ar arg0                 \" Underlined argument - use .Ar anywhere to underline
+arg2 ...                 \" Arguments
+.Sh DESCRIPTION          \" Section Header - required - don't modify
+This Function emulates in most of the characteristics of the “printf” program given with standart I&O library of C. Additionally we will give you a brief explanation of each file and its functions.
+.Pp                      \" Inserts a space
+A list of items with descriptions:
+.Bl -tag -width -indent  \" Begins a tagged list
+.It item a               \" Each item preceded by .It macro
+Description of item a
+.It item b
+Description of item b
+.El                      \" Ends the list
+.Pp
+A list of format converters and their descriptions:
+.Bl -tag -width -indent  \" Differs from above in tag removed
+.It Fl c                 \"-a flag as a list item
+Print char
+.It Fl d
+Print decimal base 10 number
+.It Fl i
+Print integer base 10 number
+.It Fl s
+Print a string of characters
+.It Fl S
+Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: '\\x'
+.It Fl x
+Print a number in hexadecimal
+.It Fl X
+Print a number in hexadecimal Uppercase
+.It Fl o
+Print number in octal
+.It Fl b
+Print binary
+.It Fl r
+Print reversed string
+.It Fl R
+Print rot13 format
+.El                      \" Ends the list
+.Pp
+.Sh SEE ALSO
+.Xr man printf 
